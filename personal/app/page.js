@@ -17,12 +17,6 @@ export default function Home() {
     AOS.init({ duration: 800, once: true });
   }, []);
 
-  // const skills = [
-  //   "Python", "Django", "React", "Next.js", "JavaScript",
-  //   "HTML & CSS", "Bootstap", "Tailwind CSS", "REST APIs",
-  //   "MySQL", "PostgreSQL", "GitHub",
-  // ];
-
   const skills = [
     { name: "Python", star: true },
     { name: "Django", star: true },
