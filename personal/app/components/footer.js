@@ -1,3 +1,5 @@
+"use client";
+
 import { FaLinkedin, FaGithub, FaWhatsapp, FaEnvelope, FaPhone } from "react-icons/fa";
 
 import { useEffect } from "react";
