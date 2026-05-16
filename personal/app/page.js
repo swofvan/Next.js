@@ -68,7 +68,7 @@ export default function Home() {
             className="mt-10 flex flex-wrap gap-4"
           >
             <Link
-              href="/projects"
+              href="/About"
               className="flex items-center gap-2 px-6 py-3 bg-purple-700 hover:bg-transparent border border-purple-700 hover:text-white font-semibold rounded-lg transition-colors duration-200"
             >
               View Projects <span><FaArrowRight /></span> 

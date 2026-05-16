@@ -2,12 +2,15 @@
 
 import Link from "next/link";
 import { useEffect } from "react";
+import { usePathname } from "next/navigation";
 
 import AOS from "aos";
 import "aos/dist/aos.css";
 
 
 export default function Nav() {
+
+    const pathname = usePathname();
 
     useEffect(() => {
         AOS.init({ duration: 800, once: true });
@@ -24,18 +27,26 @@ export default function Nav() {
 
             {/* Desktop Menu */}
             <div className="hidden md:flex items-center gap-10 text-lg" data-aos="fade-left">
-            <Link href="/" className="hover:text-purple-700 transition">
-                Home
-            </Link>
-            <Link href="/about" className="hover:text-purple-700 transition">
-                About
-            </Link>
-            <Link href="/projects" className="hover:text-purple-700 transition">
-                Projects
-            </Link>
-            <Link href="/contact" className="hover:text-purple-700 transition">
-                Contact
-            </Link>
+                <Link
+                    href="/"
+                    className={`transition hover:text-purple-700 ${
+                    pathname === "/" ? "text-purple-700 font-semibold" : ""}`}>
+                    Home
+                </Link>
+                <Link
+                    href="/about"
+                    className={`transition hover:text-purple-700 ${
+                    pathname === "/about" ? "text-purple-700 font-semibold" : ""}`}>
+                    About
+                </Link>
+                
+                <Link 
+                    href="/contact"
+                    className={`transition hover:text-purple-700 ${
+                    pathname === "/contact" ? "text-purple-700 font-semibold" : ""
+                    }`}>
+                    Contact
+                </Link>
             </div>
 
         </div>
